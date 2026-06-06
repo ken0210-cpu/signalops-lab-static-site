@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>導入相談フォーム | SignalOps Lab</title>
+  <link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+  <main class="container section">
+    <div class="badge">anonymous intake / local-first</div>
+    <h1>導入相談フォーム</h1>
+    <p class="lead">このフォームは入力内容をブラウザ内でJSON化し、ダウンロード可能にする。外部送信はまだ行わない。</p>
+    <div class="notice">外部フォーム連携なしでも、案件化に必要なヒアリング構造だけ先に固めるための実装。</div>
+    <form id="intake-form" class="card" style="margin-top:20px;">
+      <div class="form-row">
+        <label for="company">会社名または屋号</label>
+        <input id="company" name="company" placeholder="例: 匿名可 / 業種だけでも可">
+      </div>
+      <div class="form-row">
+        <label for="industry">業種</label>
+        <input id="industry" name="industry" placeholder="例: 士業 / 受託 / スクール">
+      </div>
+      <div class="form-row">
+        <label for="pain">いま一番詰まっている業務</label>
+        <textarea id="pain" name="pain" placeholder="例: 問い合わせ整理→返信→提案前処理が遅い"></textarea>
+      </div>
+      <div class="form-row">
+        <label for="volume">発生頻度</label>
+        <select id="volume" name="volume">
+          <option value="daily">毎日</option>
+          <option value="weekly">毎週</option>
+          <option value="monthly">毎月</option>
+        </select>
+      </div>
+      <div class="form-row">
+        <label for="goal">最優先で減らしたいもの</label>
+        <input id="goal" name="goal" placeholder="返信遅延 / 抜け漏れ / 作業時間 / 属人化 など">
+      </div>
+      <div class="form-row">
+        <label for="contact_mode">希望連絡手段</label>
+        <input id="contact_mode" name="contact_mode" placeholder="後で指定 / 匿名チャネル / メールなど">
+      </div>
+      <button class="button" type="submit">JSONで保存する</button>
+      <p id="status" class="small"></p>
+    </form>
+
+    <section class="card" style="margin-top:20px;">
+      <h2>JSON preview</h2>
+      <pre id="json-preview" style="white-space: pre-wrap; color: var(--muted);"></pre>
+    </section>
+
+    <div class="cta-row">
+      <a class="button secondary" href="index.html">LPへ戻る</a>
+      <a class="button secondary" href="thanks.html">完了画面を見る</a>
+    </div>
+  </main>
+  <script src="assets/app.js"></script>
+</body>
+</html>
