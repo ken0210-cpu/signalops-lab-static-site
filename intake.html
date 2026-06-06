@@ -10,8 +10,8 @@
   <main class="container section">
     <div class="badge">anonymous intake / local-first</div>
     <h1>導入相談フォーム</h1>
-    <p class="lead">このフォームは入力内容をブラウザ内でJSON化し、ダウンロード可能にする。外部送信はまだ行わない。</p>
-    <div class="notice">外部フォーム連携なしでも、案件化に必要なヒアリング構造だけ先に固めるための実装。</div>
+    <p class="lead">3分で現状を整理するための簡易診断フォーム。まずは詰まっている業務、件数感、改善したい点を可視化する。</p>
+    <div class="notice">現時点では診断内容の整理用プレビューです。公開受付導線は次段で本送信対応に切り替えます。</div>
     <form id="intake-form" class="card" style="margin-top:20px;">
       <div class="form-row">
         <label for="company">会社名または屋号</label>
@@ -41,12 +41,12 @@
         <label for="contact_mode">希望連絡手段</label>
         <input id="contact_mode" name="contact_mode" placeholder="後で指定 / 匿名チャネル / メールなど">
       </div>
-      <button class="button" type="submit">JSONで保存する</button>
+      <button class="button" type="submit">診断内容を確認する</button>
       <p id="status" class="small"></p>
     </form>
 
     <section class="card" style="margin-top:20px;">
-      <h2>JSON preview</h2>
+      <h2>診断内容プレビュー</h2>
       <pre id="json-preview" style="white-space: pre-wrap; color: var(--muted);"></pre>
     </section>
 

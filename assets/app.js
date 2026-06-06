@@ -30,7 +30,7 @@ function wireForm() {
     document.getElementById('json-preview').textContent = pretty;
     downloadText('signalops-intake.json', pretty + '\n');
     const status = document.getElementById('status');
-    status.textContent = '入力内容をJSONで保存した。提出経路に貼り付ければそのまま案件化できる。';
+    status.textContent = '診断内容を整理しました。現時点では送信前の確認プレビューです。';
   });
 }
 
